@@ -1,30 +1,30 @@
-#修改TNAME: K2P 中的K2P为你需要编译的型号，注意名称要与configs/templates/目录下的名字相同
-name: Build Padavan
+#修改TNAME: K2P中的K2P为你需要编译的型号，注意名称要与configs/templates/目录下的名称相同
+名称： 建造Padavan
 
-on: 
-  release:
-    types: [published]
-  push:
-    tags:
+于：
+  发布：
+    类型：[已发表]
+  推：
+    标签：
     - 'v*'
-  #  branches: 
-  #    - master
-#  schedule:
-#    - cron: 0 8 * * 5
-  watch:
-    types: [started]
+  # 枢纽：
+  ＃-掌握＃-掌握＃-掌握＃-掌握
+＃ 浙江：
+# - 计划任务：0 8 * * 5
+  观看：
+    类型：[开始]
 
-jobs:
-  build:
-    runs-on: ubuntu-18.04
-    if: github.event.repository.owner.id == github.event.sender.id
+职位：
+  构建：
+    运行系统： ubuntu-18.04
+    如果： github.event.repository.owner.id == github.event.sender.id
 
-    steps:
-    - name: Checkout
-      uses: actions/checkout@master
-    - name: Initialization environment
-      env:
-        DEBIAN_FRONTEND: noninteractive
+    步骤：
+    -名称：结账
+      使用： actions/checkout@master
+    -名称：初始化环境
+      环境：
+        DEBIAN_FRONTEND：非交互式
       run: |
         sudo apt-get update
         sudo apt-get -y install unzip libtool-bin curl cmake gperf gawk flex bison nano xxd fakeroot \
